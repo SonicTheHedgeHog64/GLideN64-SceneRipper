@@ -71,7 +71,7 @@ jobs:
       QT_BUILD_x86: qt-5_15-x86-msvc2017-static
       QT_BUILD_x64: qt-5_15-x64-msvc2017-static
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: microsoft/setup-msbuild@v1.1
       - uses: msys2/setup-msys2@v2
         with:
@@ -232,7 +232,7 @@ jobs:
     needs: [Windows, Linux]
     if: github.ref == 'refs/heads/master'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Download Artifacts
         uses: actions/download-artifact@v3
         with:
